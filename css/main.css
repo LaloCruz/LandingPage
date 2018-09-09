@@ -1,0 +1,325 @@
+
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    background-color: #F3F3F3;
+}
+
+#header{
+    background-color: #2D3142;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    padding: 20px 0;
+}
+.clearfix::before, .clearfix::after{
+    content: "";
+    display: table;
+}
+
+.clearfix::after{
+    clear: both;
+}
+
+.contenedor{
+    width: 95%;
+    margin: 0 auto;
+}
+
+h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2::after{
+    content: ' ';
+    margin: 0 auto;
+    background-image: url(../img/path164.png);
+    height: 17px;
+    width: 100px;
+    display: block;
+}
+
+p{
+    font-family: 'PT Sans', sans-serif;
+}
+
+div.name-site{
+    width: 100%;
+    text-align: center;
+}
+
+div.header-img{
+    /* display: inline-block; */
+    margin-bottom: 10px;
+}
+
+div.header-img img{
+    width: 40px;
+}
+
+
+div.name{
+    display: inline-block;
+}
+
+div.name h1{
+    font-family: 'Gugi', cursive;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.6em;
+}
+
+
+nav#nav-bar{
+    padding-top: 10px;
+    text-align: center;
+}
+
+nav#nav-bar .nav-link{
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    transition: all .5s ease;
+}
+
+nav#nav-bar .nav-link:hover{
+    background-color: #fe4918;
+}
+
+/* ----- ----- Nosotros ----- ----- */
+.seccion{
+    padding: 30px 0;
+}
+
+.seccion p {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+section.nosotros{
+    position: relative;
+}
+
+div.video{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+div.video video{
+    width: 100%;
+    
+}
+
+div.contenido-nosotros{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+div.info-nosotros{
+    background-color: rgba(255, 255, 255, .8);
+    padding: 15px;
+    margin: 50px 0 0 10px;
+    height: 80%;
+    width: 50%;
+}
+
+div.info-nosotros h2{
+    font-size: 1.6em;
+}
+/* ----- ----- Marcas ----- ----- */
+
+
+div.marca{
+    position: relative;
+    overflow: hidden;
+    margin: 0 20px 20px 20px;
+    
+}
+
+div.marca img{
+    max-width: 100%;
+    filter: gray;
+    -webkit-filter: grayscale(1);
+    -webkit-transition: all .5s ease-in-out;
+}
+
+div.marca:hover img{
+    -webkit-filter: grayscale(0);
+    -webkit-transform: scale(1.1);
+}
+
+div.marca h2{
+    position: absolute;
+    top:0;
+    padding: 15px 10px;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    color: #fe4918;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    -webkit-transition: all .5s ease-in-out;
+}
+
+div.marca:hover h2{
+    top: -80px;
+    opacity: 0;
+}
+
+div.marca h2::after{
+    content: none;
+}
+
+section.contacto{
+    background-color: #4F5D75;
+    text-align: center;
+}
+
+section.contacto h2{
+    color: white;
+}
+
+form{
+   margin: 20px auto;
+   width: 70%;
+}
+
+input, textarea{
+    padding: 10px 0;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.boton{
+    border: none;
+    color: white;
+    background-color: #fe4918;
+    text-decoration: none;
+    padding: 10px 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1em;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+
+@media only screen and (min-width: 768px){
+    
+    header{
+        left: 0;
+        right: 0;
+        z-index: 999;
+        position: fixed;
+        width: 100%;
+        
+    }
+    .contenedor{
+        width: 90%;
+    }
+
+    div.name-site{
+        float: left;
+        text-align: left;
+        width: 33.3%;
+    }
+
+    hr{
+        display: none;
+    }
+
+    div.header-img{
+        display: inline-block;
+        margin: 0 8px 0 0;
+        margin-bottom: 0;
+        
+    }
+
+    div.header-img img{
+        width: 50px;
+    }
+
+    div.name{
+        width: 33.3%;
+    }
+    div.name h1{
+        font-size: 1.6em;
+    }
+
+    nav#nav-bar{
+        float: right;
+        display: inline;
+        padding: 0;
+
+    }
+
+    nav#nav-bar .nav-link{
+        display: inline-block;
+        padding: 20px 10px;
+        transition: all .5s ease;
+    }
+
+    nav#nav-bar .nav-link:hover{
+        color: white;
+        cursor: pointer;
+    }
+
+    div#movil-navbar{
+        display: none;
+    }
+    section.nosotros{
+        padding-top: 100px;
+    }
+    div.info-nosotros{
+        padding-top: 75px;
+        width: 33.3%;
+        margin: 150px 0 0 10px;
+        height: 60%;
+    }
+
+    div.info-nosotros h2{
+        font-size: 2em;
+    }
+
+    div.marcas{
+        display: flex;
+        flex-direction: row;
+    }
+
+    div.marca{
+        width: 33.3%;
+        margin: 0;
+    }
+
+    div.marca:nth-child(2){
+        margin: 0 10px;
+    }
+
+    div.marca img{
+        height: 400px;
+        width:100%;
+    }
+
+    form{
+        width: 50%;
+     }
+}
